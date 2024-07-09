@@ -1,0 +1,36 @@
+export const sneakers = [
+  { id: 1, name: "Nike Air jordan", price: 12000, image: "air-max", qty: 1 },
+  { id: 2, name: "Nike Air Max", price: 16000, image: "air-jordan", qty: 1 },
+  { id: 3, name: "Nike Court Vision", price: 19000, image: "air max", qty: 1 },
+  {
+    id: 4,
+    name: "Nike Court Royale",
+    price: 22000,
+    image: "air-jordan-neon",
+    qty: 1,
+  },
+  { id: 5, name: "Nike Dunk", price: 32000, image: "court-royale", qty: 1 },
+  { id: 6, name: "Nike Blazer", price: 8000, image: "court-vision", qty: 1 },
+  {
+    id: 7,
+    name: "Nike Ghost Rider Edition",
+    price: 21000,
+    image: "ghost-rider",
+    qty: 1,
+  },
+  {
+    id: 8,
+    name: "Nike Angry Birds Edition",
+    price: 18000,
+    image: "angry-birds",
+    qty: 1,
+  },
+  {
+    id: 9,
+    name: "Nike Wild Beast Edition",
+    price: 16000,
+    image: "wild",
+    qty: 1,
+  },
+  { id: 10, name: "Nike Gta Edition", price: 30000, image: "gta", qty: 1 },
+];

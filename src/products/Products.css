@@ -1,0 +1,46 @@
+.footer-dark {
+    height: 250px;
+    font-family: system-ui;
+    font-size: medium;
+}
+
+.text-center-nike,
+.nav-font {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.text-nike-dark-footer {
+    margin-left: 10px;
+    height: 200px;
+}
+
+.nike-footer-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.nike-footer-logo {
+    max-width: 100px;
+}
+
+.footer-white {
+    height: 10px;
+}
+
+.twxt-center {
+    height: 300px;
+}
+
+.text-center-nike {
+    font-size: 30px;
+}
+
+@media (max-width: 600px) {
+    .footer-dark {
+        height: 500px;
+    }
+}
