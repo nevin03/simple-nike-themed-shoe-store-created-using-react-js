@@ -1,0 +1,210 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.custom__checkbox {
+    display: flex;
+    width: 200px;
+    height: 66px;
+    border-radius: 100px;
+    background: #45a2f5;
+    position: relative;
+    overflow: hidden;
+    padding: 4px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+svg.bg {
+    position: absolute;
+    left: -29px;
+    top: 2px;
+    width: 232px;
+    height: 84px;
+}
+
+.building {
+    width: 40px;
+    height: 80px;
+    position: absolute;
+    right: -2px;
+    top: 13px;
+    z-index: 3;
+}
+
+.custom__checkbox:before {
+    content: "";
+    width: 100%;
+    height: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #303241, #3c4456);
+    z-index: 10;
+}
+
+.custom__checkbox__face {
+    background: #ffe353;
+    width: 58px;
+    height: 58px;
+    border-radius: 100%;
+    transition: .5s;
+    position: relative;
+    z-index: 1;
+}
+
+.face__eyes {
+    display: flex;
+    justify-content: center;
+    transition: .3s;
+    padding: 14px 6px 0;
+    gap: 4px;
+}
+
+.face__eye {
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    position: relative;
+    border-radius: 100%;
+}
+
+.face__eye>span {
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    opacity: 0;
+    transition: .3s;
+}
+
+.face__eye:before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: #000;
+    right: 3px;
+    top: 3px;
+    position: absolute;
+    transition: .3s;
+}
+
+.face__eye:after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 2px;
+    border-radius: 2px;
+    background: #000;
+    right: 1px;
+    top: -1px;
+    position: absolute;
+    transition: .3s;
+}
+
+.face__mouth {
+    width: 9px;
+    height: 8px;
+    border-radius: 100%;
+    border: 2px solid;
+    display: block;
+    margin: 0px auto;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+    transition: .3s;
+}
+
+.custom__checkbox__face:hover .face__mouth {
+    width: 6px;
+    height: 3px;
+    background: #000;
+    margin-left: 35px;
+    margin-top: 3px;
+}
+
+.custom__checkbox__face:hover .face__eyes {
+    justify-content: end;
+}
+
+.custom__checkbox__face:hover .face__eye:before {
+    right: 0;
+}
+
+.custom__checkbox__face:hover .face__eye:after {
+    right: 0;
+    transform: rotate(13deg);
+}
+
+.custom__checkbox__face:hover .face__eye:last-child:after {
+    transform: rotate(-13deg);
+}
+
+input:checked+.custom__checkbox>.custom__checkbox__face {
+    transform: translateX(135px);
+}
+
+input:checked+.custom__checkbox>.custom__checkbox__face .face__eyes {
+    justify-content: start;
+}
+
+input:checked+.custom__checkbox>.custom__checkbox__face .face__eye:before {
+    left: 1px;
+}
+
+input:checked+.custom__checkbox>.custom__checkbox__face .face__eye:after {
+    transform: rotate(-7deg);
+}
+
+input:checked+.custom__checkbox>.custom__checkbox__face .face__eye:last-child:after {
+    transform: rotate(7deg);
+}
+
+input:checked+.custom__checkbox>.custom__checkbox__face .face__mouth {
+    transform: rotate(180deg);
+    margin-left: 18px;
+    margin-top: 1px;
+}
+
+input:checked+.custom__checkbox>.custom__checkbox__face:hover .face__mouth {
+    width: 6px;
+    height: 3px;
+    background: #000;
+    margin-left: 18px;
+    margin-top: 1px;
+    clip-path: none;
+}
+
+input:checked+.custom__checkbox>.custom__checkbox__face:hover .face__eyes {
+    padding: 10px 6px 0;
+}
+
+input:checked+.custom__checkbox>.custom__checkbox__face:hover .face__eye:before {
+    top: 2px;
+}
+
+input:checked+.custom__checkbox>.custom__checkbox__face:hover .face__eye>span {
+    opacity: 1;
+    top: 3px;
+    left: 2px;
+}
+
+input:focus+.custom__checkbox {
+    box-shadow: 0 0 16px #45a2f5;
+}
